@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AB749782A7A574F00486FA5 /* WhiteNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB749772A7A574F00486FA5 /* WhiteNavigationController.swift */; };
 		1AC3E8712A7A445E0074D074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3E8702A7A445E0074D074 /* AppDelegate.swift */; };
 		1AC3E8732A7A445E0074D074 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3E8722A7A445E0074D074 /* SceneDelegate.swift */; };
 		1AC3E8752A7A445E0074D074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3E8742A7A445E0074D074 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AB749772A7A574F00486FA5 /* WhiteNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteNavigationController.swift; sourceTree = "<group>"; };
 		1AC3E86D2A7A445E0074D074 /* iOS_RandomUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_RandomUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC3E8702A7A445E0074D074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AC3E8722A7A445E0074D074 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				1AC3E8792A7A44620074D074 /* Assets.xcassets */,
 				1AC3E87B2A7A44620074D074 /* LaunchScreen.storyboard */,
 				1AC3E87E2A7A44620074D074 /* Info.plist */,
+				1AB749772A7A574F00486FA5 /* WhiteNavigationController.swift */,
 			);
 			path = iOS_RandomUser;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				1AC3E8752A7A445E0074D074 /* ViewController.swift in Sources */,
 				1AC3E8712A7A445E0074D074 /* AppDelegate.swift in Sources */,
 				1AC3E8732A7A445E0074D074 /* SceneDelegate.swift in Sources */,
+				1AB749782A7A574F00486FA5 /* WhiteNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
