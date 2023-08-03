@@ -7,6 +7,13 @@
 
 import UIKit
 
+struct User {
+    var name:String?
+    var email:String?
+    var number:String?
+    var image:String?
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var userImage: UIImageView!
