@@ -52,7 +52,7 @@
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.66861128810000003" green="0.33034807440000002" blue="0.298021853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="eNg-pN-OLT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6LL-aS-9k7"/>
                             <constraint firstItem="zTo-g4-UdV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="100:812" id="6UL-BR-BZD"/>
@@ -204,9 +204,6 @@
     </scenes>
     <resources>
         <image name="User" width="100" height="100"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
