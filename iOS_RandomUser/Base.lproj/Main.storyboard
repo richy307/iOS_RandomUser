@@ -86,7 +86,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2ps-rp-pDJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="434.33333333333331"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.80848246810000002" green="0.26571199299999998" blue="0.21682447199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
                             <tableViewSection id="3xs-Ao-ZUW">
                                 <cells>
@@ -104,7 +105,7 @@
                                                         <constraint firstAttribute="width" constant="60" id="fYA-ka-rbO"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123-456-789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oq9-3c-H5Y">
@@ -114,10 +115,11 @@
                                                         <constraint firstAttribute="height" constant="21" id="gtA-sa-xlZ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.78735649590000001" green="0.2613453865" blue="0.2073017955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="IvH-Gt-Bhd" firstAttribute="leading" secondItem="xEm-dU-eBG" secondAttribute="leadingMargin" constant="15" id="2AW-ve-wZ5"/>
                                                 <constraint firstItem="IvH-Gt-Bhd" firstAttribute="centerY" secondItem="xEm-dU-eBG" secondAttribute="centerY" id="Nhy-Rt-QV9"/>
@@ -140,7 +142,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="epC-zV-7hb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abc@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8j-GZ-Ifc">
@@ -150,10 +152,11 @@
                                                         <constraint firstAttribute="width" constant="270" id="TtT-XW-7V9"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.83643692729999997" green="0.2702535391" blue="0.21655938029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="S3U-Nj-OoA" firstAttribute="leading" secondItem="Ooo-ol-2R4" secondAttribute="leadingMargin" constant="15" id="2Ln-lr-efB"/>
                                                 <constraint firstItem="g8j-GZ-Ifc" firstAttribute="centerY" secondItem="Ooo-ol-2R4" secondAttribute="centerY" id="7K2-k2-ZTU"/>
