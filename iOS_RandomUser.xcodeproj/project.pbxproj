@@ -14,6 +14,7 @@
 		1AC3E8782A7A445E0074D074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3E8762A7A445E0074D074 /* Main.storyboard */; };
 		1AC3E87A2A7A44620074D074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3E8792A7A44620074D074 /* Assets.xcassets */; };
 		1AC3E87D2A7A44620074D074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3E87B2A7A44620074D074 /* LaunchScreen.storyboard */; };
+		1AFA05932A7BCA110005248B /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA05922A7BCA110005248B /* InfoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1AC3E8792A7A44620074D074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AC3E87C2A7A44620074D074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AC3E87E2A7A44620074D074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AFA05922A7BCA110005248B /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				1AC3E87B2A7A44620074D074 /* LaunchScreen.storyboard */,
 				1AC3E87E2A7A44620074D074 /* Info.plist */,
 				1AB749772A7A574F00486FA5 /* WhiteNavigationController.swift */,
+				1AFA05922A7BCA110005248B /* InfoTableViewController.swift */,
 			);
 			path = iOS_RandomUser;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AC3E8752A7A445E0074D074 /* ViewController.swift in Sources */,
+				1AFA05932A7BCA110005248B /* InfoTableViewController.swift in Sources */,
 				1AC3E8712A7A445E0074D074 /* AppDelegate.swift in Sources */,
 				1AC3E8732A7A445E0074D074 /* SceneDelegate.swift in Sources */,
 				1AB749782A7A574F00486FA5 /* WhiteNavigationController.swift in Sources */,
