@@ -22,9 +22,17 @@ class ViewController: UIViewController {
     
     func settingInfo(user: User) {
         userName.text = user.name
-//        user.email
-//        user.number
+        infoTableViewController?.phoneLabel.text = user.number
+        infoTableViewController?.emailLabel.text = user.email
 //        user.image
+    }
+    
+    var infoTableViewController:InfoTableViewController?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "moreInfo" {
+            infoTableViewController = segue.destination as? InfoTableViewController
+        }
     }
     
     override func viewDidLoad() {
