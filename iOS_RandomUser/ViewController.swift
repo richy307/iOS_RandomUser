@@ -20,11 +20,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var userName: UILabel!
     
+    func settingInfo(user: User) {
+        userName.text = user.name
+//        user.email
+//        user.number
+//        user.image
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // mock data
+        let aUser = User(name: "Alice", email: "alice@test.com", number: "777-7777", image: "http://picture.me");
+        settingInfo(user: aUser)
     }
     
     override func viewDidAppear(_ animated: Bool) {
