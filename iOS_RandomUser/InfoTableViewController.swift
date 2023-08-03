@@ -8,7 +8,12 @@
 import UIKit
 
 class InfoTableViewController: UITableViewController {
-
+    
+    
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

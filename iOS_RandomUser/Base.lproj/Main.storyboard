@@ -173,6 +173,10 @@
                             <outlet property="delegate" destination="BdL-on-4HQ" id="phI-4b-QIt"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="emailLabel" destination="g8j-GZ-Ifc" id="Bnq-X9-PLZ"/>
+                        <outlet property="phoneLabel" destination="Oq9-3c-H5Y" id="nnp-6H-dQZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUC-mg-b5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
