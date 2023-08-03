@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        // 畫面已載入記憶體 才設定畫面
         
         // make user image circle // CALayer
         userImage.layer.cornerRadius = userImage.frame.size.width / 2
