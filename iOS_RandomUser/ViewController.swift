@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     
     func downloadInfo(withAddress webAddress:String) {
         if let url = URL(string: webAddress) {
+            // Api Task
             let task = urlSession.dataTask(with: url) {
                 (data, urlResponse, error) in
                 if error != nil {
@@ -44,6 +45,7 @@ class ViewController: UIViewController {
                     print("got data")
                 }
             }
+            // call Api
             task.resume()
         }
     }
