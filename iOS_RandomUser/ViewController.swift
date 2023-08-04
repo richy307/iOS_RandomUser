@@ -34,20 +34,40 @@ class ViewController: UIViewController {
                 if error != nil {
                     let errorCode = (error! as NSError).code
                     if errorCode == -1009 {
-                        print("no internet connection")
+                        // print("no internet connection")
+                        DispatchQueue.main.async {
+                            self.popAlert(withTitle: "no internet connection")
+                        }
                     } else {
-                        print("something's wrong")
+                        // print("something's wrong")
+                        DispatchQueue.main.async {
+                            self.popAlert(withTitle: "sorry")
+                        }
                     }
                     return
                 }
                 
                 if let loadedData = data {
-                    print("got data")
+                    // print("got data")
+                    // 舊方法
+                    do {
+                        
+                    } catch {
+                        DispatchQueue.main.async {
+                            self.popAlert(withTitle: "sorry")
+                        }
+                    }
                 }
             }
             // call Api
             task.resume()
         }
+    }
+    
+    func popAlert(withTitle title:String) {
+        let alert = UIAlertController(title: title, message: "Please try again later", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     var infoTableViewController:InfoTableViewController?
