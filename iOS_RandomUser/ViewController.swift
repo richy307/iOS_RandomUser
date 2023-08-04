@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 struct User {
     var name:String?
@@ -67,6 +68,7 @@ class ViewController: UIViewController {
                             let downloadImage = UIImage(data: try Data(contentsOf: okURL))
                             DispatchQueue.main.async {
                                 self.userImage.image = downloadImage
+                                AudioServicesPlaySystemSound(1000)
                             }
                         } catch {
                             DispatchQueue.main.async {
