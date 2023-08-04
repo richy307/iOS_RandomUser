@@ -68,6 +68,9 @@
                     <navigationItem key="navigationItem" title="Random User" id="RlJ-Kz-l3M">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ywj-hc-NoQ">
                             <color key="tintColor" systemColor="systemYellowColor"/>
+                            <connections>
+                                <action selector="makeNewUser:" destination="BYZ-38-t0r" id="yoL-LO-5cX"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

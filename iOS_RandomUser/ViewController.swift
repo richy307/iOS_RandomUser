@@ -42,6 +42,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
+    @IBAction func makeNewUser(_ sender: UIBarButtonItem) {
+    }
     
     func settingInfo(user: User) {
         userName.text = user.name
