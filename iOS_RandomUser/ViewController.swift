@@ -51,6 +51,10 @@ class ViewController: UIViewController {
                     // print("got data")
                     // 舊方法
                     do {
+                        let json = try JSONSerialization.jsonObject(with: loadedData, options: [])
+                        DispatchQueue.main.async {
+                            self.parseJson(json: json)
+                        }
                         
                     } catch {
                         DispatchQueue.main.async {
@@ -62,6 +66,34 @@ class ViewController: UIViewController {
             // call Api
             task.resume()
         }
+    }
+    
+    func userFullName(nameDictionary: Any?) -> String? {
+        if let okDictionary = nameDictionary as? [String:String] {
+            let firstname = okDictionary["first"] ?? ""
+            let lastname = okDictionary["last"] ?? ""
+            return firstname + " " + lastname
+        } else {
+            return nil
+        }
+    }
+    
+    func parseJson(json: Any) {
+        if let okJson = json as? [String:Any] {
+            if let infoArray = okJson["results"] as? [[String:Any]] {
+                let infoDictionary = infoArray[0]
+                // print(infoDictionary["name"])
+                let loadedName = userFullName(nameDictionary: infoDictionary["name"])
+                let loadedEmail = infoDictionary["email"] as? String
+                let loadedPhone = infoDictionary["phone"] as? String
+                let imageDictionary = infoDictionary["picture"] as? [String:String]
+                let loadedImageAddress = imageDictionary?["large"]
+                let loadedUser = User(name: loadedName, email: loadedEmail, number: loadedPhone, image: loadedImageAddress)
+                settingInfo(user: loadedUser)
+                
+            }
+        }
+        
     }
     
     func popAlert(withTitle title:String) {
