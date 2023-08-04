@@ -14,6 +14,30 @@ struct User {
     var image:String?
 }
 
+// 1. 字典需要加人新的結構模仿，其他不用
+// 2. 需要的資料才需要模仿，不需要的資料不用管
+// 3. 模仿資料的屬性要跟 Key 的名稱一樣
+struct AllData:Decodable {
+    var results: [SingleData]?
+}
+
+struct SingleData:Decodable {
+    var name: Name?
+    var email: String?
+    var phone: String?
+    var picture: Picture?
+}
+
+struct Name:Decodable {
+    var first: String?
+    var last: String?
+}
+
+struct Picture:Decodable {
+    var large: String?
+}
+
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var userImage: UIImageView!
@@ -49,11 +73,29 @@ class ViewController: UIViewController {
                 
                 if let loadedData = data {
                     // print("got data")
-                    // 舊方法
                     do {
-                        let json = try JSONSerialization.jsonObject(with: loadedData, options: [])
+                        // 舊方法
+//                        let json = try JSONSerialization.jsonObject(with: loadedData, options: [])
+//                        DispatchQueue.main.async {
+//                            self.parseJson(json: json)
+//                        }
+                        
+                        // 新方法
+                        let okData = try JSONDecoder().decode(AllData.self, from: loadedData)
+                        
+                        let firstname = okData.results?[0].name?.first
+                        let lastname = okData.results?[0].name?.last
+                        let fullname:String? = {
+                            guard let okFirstname = firstname, let okLasttname = lastname else { return nil }
+                            return okFirstname + " " + okLasttname
+                        }()
+                        let email = okData.results?[0].email
+                        let phone = okData.results?[0].phone
+                        let picture = okData.results?[0].picture?.large
+                        
+                        let aUser = User(name: fullname, email: email, number: phone, image: picture)
                         DispatchQueue.main.async {
-                            self.parseJson(json: json)
+                            self.settingInfo(user: aUser)
                         }
                         
                     } catch {
@@ -81,6 +123,7 @@ class ViewController: UIViewController {
     func parseJson(json: Any) {
         if let okJson = json as? [String:Any] {
             if let infoArray = okJson["results"] as? [[String:Any]] {
+                
                 let infoDictionary = infoArray[0]
                 // print(infoDictionary["name"])
                 let loadedName = userFullName(nameDictionary: infoDictionary["name"])
@@ -89,11 +132,10 @@ class ViewController: UIViewController {
                 let imageDictionary = infoDictionary["picture"] as? [String:String]
                 let loadedImageAddress = imageDictionary?["large"]
                 let loadedUser = User(name: loadedName, email: loadedEmail, number: loadedPhone, image: loadedImageAddress)
-                settingInfo(user: loadedUser)
                 
+                settingInfo(user: loadedUser)
             }
         }
-        
     }
     
     func popAlert(withTitle title:String) {
