@@ -44,6 +44,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBAction func makeNewUser(_ sender: UIBarButtonItem) {
+        if isDownloading == false {
+            downloadInfo(withAddress: apiAddress)
+        }
     }
     
     func settingInfo(user: User) {
@@ -60,6 +63,7 @@ class ViewController: UIViewController {
                         DispatchQueue.main.async {
                             self.popAlert(withTitle: "sorry")
                         }
+                        self.isDownloading = false
                         return
                     }
                     
@@ -70,15 +74,23 @@ class ViewController: UIViewController {
                                 self.userImage.image = downloadImage
                                 AudioServicesPlaySystemSound(1000)
                             }
+                            self.isDownloading = false
                         } catch {
                             DispatchQueue.main.async {
                                 self.popAlert(withTitle: "sorry")
                             }
+                            self.isDownloading = false
                         }
+                    } else {
+                        self.isDownloading = false
                     }
                 }
                 task.resume()
+            } else {
+                self.isDownloading = false
             }
+        } else {
+            self.isDownloading = false
         }
     }
     
@@ -100,6 +112,7 @@ class ViewController: UIViewController {
                             self.popAlert(withTitle: "sorry")
                         }
                     }
+                    self.isDownloading = false
                     return
                 }
                 
@@ -134,11 +147,15 @@ class ViewController: UIViewController {
                         DispatchQueue.main.async {
                             self.popAlert(withTitle: "sorry")
                         }
+                        self.isDownloading = false
                     }
+                } else {
+                    self.isDownloading = false
                 }
             }
             // call Api
             task.resume()
+            isDownloading = true
         }
     }
     
@@ -179,6 +196,7 @@ class ViewController: UIViewController {
     var infoTableViewController:InfoTableViewController?
     let apiAddress = "https://randomuser.me/api/"
     var urlSession = URLSession(configuration: .default)
+    var isDownloading = false
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "moreInfo" {
