@@ -47,7 +47,35 @@ class ViewController: UIViewController {
         userName.text = user.name
         infoTableViewController?.phoneLabel.text = user.number
         infoTableViewController?.emailLabel.text = user.email
-//        user.image
+        
+        if let imageAddress = user.image {
+            if let imageURL = URL(string: imageAddress) {
+                let task = urlSession.downloadTask(with: imageURL) {
+                    
+                    (url, urlResponse, error) in
+                    if error != nil {
+                        DispatchQueue.main.async {
+                            self.popAlert(withTitle: "sorry")
+                        }
+                        return
+                    }
+                    
+                    if let okURL = url {
+                        do {
+                            let downloadImage = UIImage(data: try Data(contentsOf: okURL))
+                            DispatchQueue.main.async {
+                                self.userImage.image = downloadImage
+                            }
+                        } catch {
+                            DispatchQueue.main.async {
+                                self.popAlert(withTitle: "sorry")
+                            }
+                        }
+                    }
+                }
+                task.resume()
+            }
+        }
     }
     
     func downloadInfo(withAddress webAddress:String) {
