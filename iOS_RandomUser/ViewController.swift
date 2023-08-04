@@ -85,8 +85,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // mock data
-        let aUser = User(name: "Alice", email: "alice@test.com", number: "777-7777", image: "http://picture.me");
-        settingInfo(user: aUser)
+        // let aUser = User(name: "Alice", email: "alice@test.com", number: "777-7777", image: "http://picture.me");
+        // settingInfo(user: aUser)
+        
+        // Real Api Data
         downloadInfo(withAddress: apiAddress)
     }
     
